@@ -1,0 +1,48 @@
+:root {
+  /* 金融科技风格 - 深色主题 */
+  --color-bg: #0f1419;
+  --color-surface: #1a2332;
+  --color-surface-elevated: #243044;
+  --color-border: #2d3a4d;
+  --color-primary: #00d4aa;
+  --color-primary-dim: #00a884;
+  --color-danger: #ff6b6b;
+  --color-warning: #ffc107;
+  --color-text: #e7e9ea;
+  --color-text-muted: #8b98a5;
+  --font-sans: 'Geist', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --radius: 8px;
+  --shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 涨跌配色 */
+.up { color: var(--color-danger); }
+.down { color: var(--color-primary); }

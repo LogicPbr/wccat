@@ -1,0 +1,34 @@
+package com.wccat.common.exception;
+
+import org.springframework.http.HttpStatus;
+
+/**
+ * 业务异常
+ */
+public class BusinessException extends RuntimeException {
+
+    private final String code;
+    private final HttpStatus httpStatus;
+
+    public BusinessException(String message) {
+        this("BUSINESS_ERROR", message, HttpStatus.BAD_REQUEST);
+    }
+
+    public BusinessException(String code, String message) {
+        this(code, message, HttpStatus.BAD_REQUEST);
+    }
+
+    public BusinessException(String code, String message, HttpStatus httpStatus) {
+        super(message);
+        this.code = code;
+        this.httpStatus = httpStatus;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public HttpStatus getHttpStatus() {
+        return httpStatus;
+    }
+}
